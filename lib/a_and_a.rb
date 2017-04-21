@@ -1,7 +1,7 @@
 class String
 
   def is_a_word?(input)
-    if input.length !=0 && input.match(/^[aeiou]*/i)
+    if input.length !=0 && input.match((/[AEIOUY]+/i))
       true
     else
       false
