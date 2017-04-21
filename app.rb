@@ -12,24 +12,32 @@ get "/result" do
 
   input1 = params.fetch("input_1")
   input2 = params.fetch("input_2")
+  let(:word) { String.new }
 
-  if(word.is_a_word?(input1) && word.input2.is_a_word?(input2))
+  if(word.is_a_word?(input1) && word.is_a_word?(input2))
     @passed = "Good job on putting in two good words"
-    if anagram?
-      @anagram = "#{input1} and #{input2} are anagrams"
-      if palindrome?
-        @palindrome = "and these are palindromes too"
-      else
-         @palindrome = "however, they aren't palindromes"
-    else
-      @anagram = "#{input1} and #{input2} are NOT anagrams"
   else
-    @passed = "Try putting in real words"
-    if antigram?
-      @antigram = "#{input1} and #{input2} are antigrams"
-    else
-      @antigram = "#{input1} and #{input2} are NOT antigrams"
+    @passed = "no good, try again"
   end
-
   erb(:result)
-end
+end#ends result do
+
+
+    # if anagram?
+    #   @anagram = "#{input1} and #{input2} are anagrams"
+    #   if palindrome?
+    #     @palindrome = "and these are palindromes too"
+    #   else
+    #     @palindrome = "however, they are NOT palindromes"
+    #   end#ends palindrome
+    #
+    # else
+    #   @anagram = "#{input1} and #{input2} are NOT anagrams"
+    #   if antigram?
+    #     @antigram = "but these are antigrams"
+    #   else
+    #     @antigram = "and they are NOT antigrams"
+    #   end
+    # end
+#   erb(:result)
+# end#ends result do
