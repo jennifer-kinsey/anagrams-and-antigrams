@@ -15,24 +15,16 @@ class String
     both_words.uniq == (input1.split("") - [" "])
   end
 
-  def palindrome(input2)
+  def palindrome?(input2)
     input1 = self.downcase.gsub(/\s+/, "")
     input2= input2.downcase.gsub(/\s+/, "")
-    if input1.reverse == input2
-      return true
-    else
-      false
-    end
+    input1.reverse == input2
   end
 
-  def antigram (input2)
+  def antigram?(input2)
     input1 = self.downcase.gsub(/\s+/, "")
     input2= input2.downcase.gsub(/\s+/, "")
     both_words = (input1 + input2).split("") - [" "]
-    if both_words.uniq.length == (input1 + input2).length
-      return true
-    else
-      return false
-    end
+    both_words.uniq.length == (input1 + input2).length
   end
 end

@@ -37,22 +37,22 @@ describe("String#anagram?") do
 
 end
 
-describe("String#palindrome") do
+describe("String#palindrome?") do
   it("returns true if one word backwards is the other word") do
-    expect(("eat").palindrome("tae")).to(eq(true))
+    expect(("eat").palindrome?("tae")).to(eq(true))
   end
 
   it("returns false if one word backwards is not the other word") do
-    expect(("ofoiejoijeat").palindrome("tea")).to(eq(false))
+    expect(("ofoiejoijeat").palindrome?("tea")).to(eq(false))
   end
 end
 
 describe("String#antigram") do
   it("returns true if one word is the antigram of the other - that is, has all unique characters") do
-    expect(("cat").antigram("bike")).to(eq(true))
+    expect(("cat").antigram?("bike")).to(eq(true))
   end
 
   it("returns false if one word backwards is not the other word") do
-    expect(("cake").antigram("tea")).to(eq(false))
+    expect(("cake").antigram?("tea")).to(eq(false))
   end
 end
