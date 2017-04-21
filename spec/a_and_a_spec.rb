@@ -36,3 +36,13 @@ describe("String#anagram?") do
   end
 
 end
+
+describe("String#palindrome") do
+  it("returns true if one word backwards is the other word") do
+    expect(("eat").palindrome("tae")).to(eq(true))
+  end
+
+  it("returns false if one word backwards is not the other word") do
+    expect(("ofoiejoijeat").palindrome("tea")).to(eq(false))
+  end
+end
