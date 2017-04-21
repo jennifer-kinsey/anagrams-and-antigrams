@@ -46,3 +46,13 @@ describe("String#palindrome") do
     expect(("ofoiejoijeat").palindrome("tea")).to(eq(false))
   end
 end
+
+describe("String#antigram") do
+  it("returns true if one word is the antigram of the other - that is, has all unique characters") do
+    expect(("cat").antigram("bike")).to(eq(true))
+  end
+
+  it("returns false if one word backwards is not the other word") do
+    expect(("cake").antigram("tea")).to(eq(false))
+  end
+end

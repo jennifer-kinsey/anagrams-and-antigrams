@@ -25,4 +25,14 @@ class String
     end
   end
 
+  def antigram (input2)
+    input1 = self.downcase.gsub(/\s+/, "")
+    input2= input2.downcase.gsub(/\s+/, "")
+    both_words = (input1 + input2).split("") - [" "]
+    if both_words.uniq.length == (input1 + input2).length
+      return true
+    else
+      return false
+    end
+  end
 end
