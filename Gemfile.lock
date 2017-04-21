@@ -66,6 +66,7 @@ PLATFORMS
 DEPENDENCIES
   capybara
   pry
+  rack (< 2.0)
   rspec
   sinatra
   sinatra-contrib
